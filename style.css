@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    color: #75573a;
+    font-family: sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+h1, h2{
+    font-weight: 900;
+    color:#3f2305;
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background-color:#ffebeb;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 15px;
+    animation: surgir 3s ease;
+    animation-timeline: view();
+    animation-range: cover 40% cover 40%;
+}
+
+section.modulo p{
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1em;
+    padding-right: 39px;
+    }
+
+section.modulo h2{
+    margin-bottom: 30px;
+font-size: 30px;
+text-transform: uppercase;
+text-align: center;
+}
+
+section.modulo.content{
+padding: 40px 0;
+background: #DFD7BF;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: #3f2305;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    z-index: 50;
+    text-shadow: 1px 1px 1px #DFD7BF;
+}
+
+section.modulo.parallax:after{
+content: "";
+height: 100%;
+width: 100%;
+z-index: 8;
+position: absolute;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0,0,0,0) 50%, #DFD7BF 100%);
+}
+
+section.modulo.parallax-1{
+    background-image: url(https://cdn.pixabay.com/photo/2018/07/14/15/27/cafe-3537801_1280.jpg);
+}
+
+section.modulo.parallax-2{
+    background-image: url(https://cdn.pixabay.com/photo/2020/09/21/05/57/coffee-5589036_1280.jpg);
+}
+
+section.modulo.parallax-3{
+    background-image: url(https://cdn.pixabay.com/photo/2017/07/31/11/22/man-2557408_1280.jpg);
+}
+
+footer{
+    text-align: center;
+    background-color: #DFD7BF;
+}
+
+@media all and (max-width: 820px) {
+
+    body{
+        margin: 0;
+        padding: 0;
+        color: #75573a;
+        box-sizing: border-box;
+        width: 100%;
+        margin: auto auto;
+    }
+    
+    
+    section.modulo p{
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1em;
+        padding-right: 39px;
+        }
+
+        section.modulo.parallax h1{
+            color:#ffffff;
+            text-align: center;
+            font-size: 2em;
+            text-transform: uppercase;
+            z-index: 50;
+            text-shadow: 1px 1px 1px #000000;
+        }
+
+
+        section.modulo.parallax-3{
+            background-image: url(https://cdn.pixabay.com/photo/2017/07/31/11/22/man-2557408_1280.jpg);
+        }
+}
+
+@keyframes surgir{
+    from{
+opacity: 0;
+translate: -100vw 0;
+    }
+
+    to{
+opacity: 1;
+translate: 0 0;
+    }
+}
